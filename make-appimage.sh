@@ -8,7 +8,7 @@ export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/opt/sdlpop/data/icon.png
+export ICON=DUMMY
 export DESKTOP=DUMMY
 export DEPLOY_OPENGL=1
 
