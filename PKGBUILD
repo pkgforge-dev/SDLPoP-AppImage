@@ -26,5 +26,5 @@ package() {
   install -dm755 "${pkgdir}/usr/bin/"
   install -m755 prince "$pkgdir"/usr/bin
   install -dm755 "${pkgdir}/usr/share/sdlpop/"
-  cp -r data doc mods SDLPoP.ini "$pkgdir"/usr/share/sdlpop
+  cp -r data doc mods SDLPoP.ini "$pkgdir"/usr/share/sdlpop/
 }
