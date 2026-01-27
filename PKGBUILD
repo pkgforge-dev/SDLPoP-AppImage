@@ -27,4 +27,5 @@ package() {
   install -m755 prince "$pkgdir"/usr/bin
   install -dm757 "$pkgdir"/opt/sdlpop
   cp -r data doc mods SDLPoP.ini "$pkgdir"/opt/sdlpop
+  install -Dm644 data/icon.png "${pkgdir}/usr/share/pixmaps/prince.png"
 }
