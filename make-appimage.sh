@@ -8,13 +8,13 @@ export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
-export ICON=/opt/sdlpop/data/icon.png
+export ICON=/usr/bin/data/icon.png
 export DESKTOP=DUMMY
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /opt/sdlpop/prince
-mv /opt/sdlpop/* ./AppDir/bin
+quick-sharun /usr/bin/prince
+#mv /opt/sdlpop/* ./AppDir/bin
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
