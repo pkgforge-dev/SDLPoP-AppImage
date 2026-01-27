@@ -23,7 +23,7 @@ build() {
 package() {
   cd SDLPoP-$_pkgver
   # world-writable for save/load games, config, etc.
-  #install -dm757 "$pkgdir"/opt/sdlpop
+  install -dm755 "${pkgdir}/usr/bin/"
   install -m755 prince "$pkgdir"/usr/bin
   cp -r data doc mods SDLPoP.ini "$pkgdir"/usr/bin
 }
