@@ -14,12 +14,6 @@ options=('!debug' 'strip')
 source=("sdlpop-$pkgver.tar.gz::https://github.com/NagyD/SDLPoP/archive/v$_pkgver.tar.gz")
 b2sums=('07e10e5f61e0f38e6d17baafb0a47951d5b19748c917dff67c8d94fdccefe843fef05db5aee2a12ac490f3e770771b604fd5225d549a84d07e201117ed721792')
 
-prepare() {
-  cd SDLPoP-$_pkgver/src
-  # shellcheck disable=SC2016 # the template just uses $ROOT
-  mv SDLPoP.desktop.template SDLPoP.desktop
-}
-
 build() {
   cd SDLPoP-$_pkgver/src
   export CFLAGS+=" $CPPFLAGS"
@@ -30,7 +24,6 @@ package() {
   cd SDLPoP-$_pkgver
   # world-writable for save/load games, config, etc.
   install -dm757 "$pkgdir"/opt/sdlpop
-  install -m755 prince "$pkgdir"/opt/sdlpop
+  install -m755 prince "$pkgdir"/opt/sdlpop/sdlpop
   cp -r data doc mods SDLPoP.ini "$pkgdir"/opt/sdlpop
-  install -Dm644 src/SDLPoP.desktop "$pkgdir"/usr/share/applications/sdlpop.desktop
 }
