@@ -25,5 +25,6 @@ package() {
   # world-writable for save/load games, config, etc.
   install -dm755 "${pkgdir}/usr/bin/"
   install -m755 prince "$pkgdir"/usr/bin
-  cp -r data doc mods SDLPoP.ini "$pkgdir"/usr/bin
+  install -dm755 "${pkgdir}/usr/share/sdlpop/"
+  cp -r data doc mods SDLPoP.ini "$pkgdir"/usr/share/sdlpop
 }
