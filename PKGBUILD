@@ -24,6 +24,6 @@ package() {
   cd SDLPoP-$_pkgver
   # world-writable for save/load games, config, etc.
   install -dm757 "$pkgdir"/opt/sdlpop
-  install -m755 prince "$pkgdir"/opt/sdlpop/sdlpop
+  install -m755 prince "$pkgdir"/opt/sdlpop
   cp -r data doc mods SDLPoP.ini "$pkgdir"/opt/sdlpop
 }
