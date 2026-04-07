@@ -12,6 +12,7 @@ export ICON=https://raw.githubusercontent.com/NagyD/SDLPoP/refs/heads/master/dat
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
+mkdir -p ./AppDir/bin
 mv /opt/sdlpop/* ./AppDir/bin
 quick-sharun ./AppDir/bin/prince /usr/lib/libSDL2_image-2.0.so.0
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
