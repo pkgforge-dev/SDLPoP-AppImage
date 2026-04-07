@@ -9,13 +9,12 @@ export OUTPATH=./dist
 export ADD_HOOKS="self-updater.bg.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=https://raw.githubusercontent.com/NagyD/SDLPoP/refs/heads/master/data/icon.png
-export DESKTOP=/usr/share/applications/sdlpop.desktop
 export STARTUPWMCLASS=prince
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun /usr/bin/prince
 mv /opt/sdlpop/* ./AppDir/bin
+quick-sharun ./AppDir/bin/prince /usr/lib/libSDL2_image-2.0.so.0
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
 
 # Additional changes can be done in between here
