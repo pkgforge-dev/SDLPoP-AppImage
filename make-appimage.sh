@@ -3,7 +3,7 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=$(pacman -Q sdlpop | awk '{print $2; exit}') # example command to get version of application here
+VERSION=$(pacman -Q sdlpop | awk '{print $2; exit}')
 export ARCH VERSION
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
@@ -16,8 +16,6 @@ mkdir -p ./AppDir/bin
 mv /opt/sdlpop/* ./AppDir/bin
 quick-sharun ./AppDir/bin/prince /usr/lib/libSDL2_image-2.0.so.0
 echo 'SHARUN_WORKING_DIR=${SHARUN_DIR}/bin' >> ./AppDir/.env
-
-# Additional changes can be done in between here
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
