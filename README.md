@@ -3,7 +3,7 @@
 # SDLPoP-AppImage 🐧
 
 [![GitHub Downloads](https://img.shields.io/github/downloads/pkgforge-dev/SDLPoP-AppImage/total?logo=github&label=GitHub%20Downloads)](https://github.com/pkgforge-dev/SDLPoP-AppImage/releases/latest)
-[![CI Build Status](https://github.com//pkgforge-dev/SDLPoP-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/SDLPoP-AppImage/releases/latest)
+[![CI Build Status](https://github.com/pkgforge-dev/SDLPoP-AppImage/actions/workflows/appimage.yml/badge.svg)](https://github.com/pkgforge-dev/SDLPoP-AppImage/releases/latest)
 [![Latest Stable Release](https://img.shields.io/github/v/release/pkgforge-dev/SDLPoP-AppImage)](https://github.com/pkgforge-dev/SDLPoP-AppImage/releases/latest)
 
 <p align="center">
