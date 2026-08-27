@@ -24,6 +24,6 @@ git clone "$REPO" ./SDLPoP
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
-cd ./SDLPoP
+cd ./SDLPoP/src
 make -j$(nproc)
-mv -v prince data SDLPoP.ini ../AppDir/bin
+mv -v prince ../data ../SDLPoP.ini ../../AppDir/bin
