@@ -25,5 +25,5 @@ echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
 cd ./SDLPoP
-make blood -j$(nproc)
+make -j$(nproc)
 mv -v prince data SDLPoP.ini ../AppDir/bin
