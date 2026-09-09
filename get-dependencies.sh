@@ -16,7 +16,7 @@ echo "Building SDLPoP..."
 echo "---------------------------------------------------------------"
 REPO="https://github.com/NagyD/SDLPoP"
 VERSION="$(git ls-remote "$REPO" HEAD | cut -c 1-9 | head -1)"
-git clone "$REPO" ./SDLPoP
+git clone --depth 1 "$REPO" ./SDLPoP
 echo "$VERSION" > ~/version
 
 mkdir -p ./AppDir/bin
